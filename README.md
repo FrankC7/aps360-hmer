@@ -1,1 +1,1 @@
-# aps360-project
+# Handwritten Mathematical Expression Recognition (HMER) System
