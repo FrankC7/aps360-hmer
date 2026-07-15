@@ -5,8 +5,8 @@ import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 
 # Folder Paths
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # aps360-hmer/baseline
-DATA_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "..", "data"))  # aps360-hmer/data
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))  # aps360-hmer
+DATA_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "data"))  # aps360-hmer/data
 CROHME_DIR = os.path.join(DATA_DIR, "crohme2019")  # aps360-hmer/data/crohme2019
 
 # Ground Truth Paths
@@ -202,7 +202,8 @@ if __name__ == "__main__":
             exit(1)
 
     # Initialize model with Euclidean metric
-    baseline = GlobalKNNBaseline(k=1, target_shape=(32, 100))
+    # baseline = GlobalKNNBaseline(k=1, target_shape=(32, 100))
+    baseline = GlobalKNNBaseline(k=1, target_shape=(100, 32))
 
     print("\n=== STEP 2: TRAINING (INDEXING TRAINING SPLIT) ===")
     start_time = time.time()
